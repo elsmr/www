@@ -55,7 +55,11 @@ export const SEO: SFC<Partial<SiteMetadata>> = (props) => {
   }
 
   return (
-    <Helmet titleTemplate={metadata.titleTemplate} defaultTitle={metadata.name}>
+    <Helmet
+      titleTemplate={metadata.titleTemplate}
+      defaultTitle={metadata.name}
+      htmlAttributes={{ lang: 'en' }}
+    >
       <link rel="canonical" href={metadata.url} />
       <meta name="description" content={metadata.description} />
       <meta name="image" content={imageUrl} />

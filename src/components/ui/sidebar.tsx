@@ -79,7 +79,7 @@ export const Sidebar: SFC<{ isOpen: boolean; onClose: () => void }> = ({
         >
           <Heading>Theme</Heading>
 
-          <IconButton variant="iconSmall" onClick={onClose}>
+          <IconButton variant="iconSmall" aria-label="Close" onClick={onClose}>
             <X width="20px" />
           </IconButton>
         </Flex>

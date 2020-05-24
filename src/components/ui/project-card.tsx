@@ -29,6 +29,7 @@ export const ProjectCard: SFC<Project> = ({
     <ALink
       variant="invisible"
       href={href}
+      aria-label={title}
       onMouseEnter={() => setT({ t: 1 })}
       onMouseLeave={() => setT({ t: 0 })}
       style={{
