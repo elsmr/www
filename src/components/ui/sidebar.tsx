@@ -37,6 +37,10 @@ export const Sidebar: SFC<{ isOpen: boolean; onClose: () => void }> = ({
     setColorMode(value === 'other' ? 'nightOwl' : value)
   }
 
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   return createPortal(
     <FocusLock disabled={!isOpen} returnFocus>
       {isOpen && (
