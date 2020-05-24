@@ -55,7 +55,8 @@ export const Sidebar: SFC<{ isOpen: boolean; onClose: () => void }> = ({
       <ABox
         sx={{
           position: 'fixed',
-          width: '360px',
+          minWidth: '300px',
+          width: '20vw',
           top: 0,
           bottom: 0,
           right: 0,

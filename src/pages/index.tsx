@@ -101,13 +101,13 @@ export default () => {
           <Grid
             gap={4}
             columns={[1, 2]}
-            sx={{ alignItems: 'center', mb: 5, position: 'relative' }}
+            sx={{ alignItems: 'center', mb: [3, 5], position: 'relative' }}
             as="section"
           >
             <Flex sx={{ width: '100%', justifyContent: 'center' }}>
               <Profile
                 sx={{
-                  width: ['50%', '80%', '66%'],
+                  width: ['66%', '90%', '66%'],
                   height: '100%',
                   minWidth: '200px',
                   color: 'illustration',

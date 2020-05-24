@@ -7,7 +7,7 @@ export const Wrapper = React.forwardRef<HTMLDivElement, BoxProps>(
       ref={ref}
       {...props}
       sx={{
-        py: 5,
+        py: [4, 5],
         px: [4, 5],
         width: '100%',
         maxWidth: '1100px',
