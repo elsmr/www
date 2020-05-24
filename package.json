@@ -18,6 +18,7 @@
     "@emotion/styled": "^10.0.27",
     "@theme-ui/color": "^0.3.1",
     "gatsby": "2.22.3",
+    "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-source-filesystem": "^2.3.8",

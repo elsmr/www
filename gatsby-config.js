@@ -27,5 +27,17 @@ module.exports = {
         path: `./content/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Elias Meire`,
+        short_name: `elsmr`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#7F5AF0`,
+        display: `standalone`,
+        icon: 'static/logo.png',
+      },
+    },
   ],
 }
