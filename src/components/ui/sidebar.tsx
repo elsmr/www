@@ -124,7 +124,6 @@ export const Sidebar: SFC<{ isOpen: boolean; onClose: () => void }> = ({
               </optgroup>
 
               <optgroup label="Light">
-                <option value="materialLight">Material</option>
                 <option value="github">GitHub</option>
               </optgroup>
             </Select>
