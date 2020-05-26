@@ -12,6 +12,8 @@ module.exports = {
       "Frontend developer based in Ghent, Belgium. I love JavaScript, React and Open Source. Currently I'm obsessing over: animation, a11y, theme-ui and Canvas/WebGL.",
     url: 'https://elsmr.dev',
     imageUrl: 'https://elsmr.dev/elias.jpg',
+    imageHeight: '720px',
+    imageWidth: '720px',
     email: 'elias@meire.dev',
     twitter: '@elsmr_',
     github: 'elsmr',
