@@ -1,6 +1,7 @@
 const focusRing = {
   '&:focus': {
     color: 'inherit',
+    bg: 'inherit',
     outline: 'none',
     boxShadow: (theme) =>
       `0 0 0 2px ${theme.colors.background}, 0 0 0 4px ${theme.colors.control}`,
