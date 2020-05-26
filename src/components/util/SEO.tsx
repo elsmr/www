@@ -32,8 +32,8 @@ export interface SiteMetadata {
   twitter: string
   github: string
   job: string
-  imageWidth: string
-  imageHeight: string
+  imageWidth: number
+  imageHeight: number
 }
 
 export const SEO: SFC<Partial<SiteMetadata>> = (props) => {
@@ -73,8 +73,14 @@ export const SEO: SFC<Partial<SiteMetadata>> = (props) => {
       <meta property="og:title" content={metadata.name} />
       <meta property="og:description" content={metadata.description} />
       <meta property="og:image" content={imageUrl} />
-      <meta property="og:image:width" content={metadata.imageWidth} />
-      <meta property="og:image:height" content={metadata.imageHeight} />
+      <meta
+        property="og:image:width"
+        content={metadata.imageWidth.toString()}
+      />
+      <meta
+        property="og:image:height"
+        content={metadata.imageHeight.toString()}
+      />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={metadata.twitter} />
