@@ -1,6 +1,5 @@
 export const siteMetadata = {
   name: 'Elias Meire',
-  titleTemplate: '%s · Elias Meire',
   description:
     "Frontend developer based in Ghent, Belgium. I love JavaScript, React and Open Source. Currently I'm obsessing over: animation, a11y, theme-ui and Canvas/WebGL.",
   url: 'https://elsmr.dev',

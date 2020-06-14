@@ -22,9 +22,13 @@ export const SEO: SFC<Partial<SiteMetadata>> = () => {
 
   return (
     <Head>
+      <title>{siteMetadata.name}</title>
       <link rel="canonical" href={siteMetadata.url} />
+      <link rel="manifest" href="/manifest.webmanifest"></link>
       <meta name="description" content={siteMetadata.description} />
       <meta name="image" content={imageUrl} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
 
       <meta property="og:url" content={siteMetadata.url} />
       <meta property="og:type" content="website" />
