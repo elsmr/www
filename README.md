@@ -5,11 +5,11 @@
 ## Develop
 
 ```
-npm start
+npm run dev
 ```
 
 ## Serve
 
 ```
-npm run serve
+npm start
 ```

@@ -1,5 +1,4 @@
 import { StyledComponent } from '@emotion/styled'
-import { graphql, useStaticQuery } from 'gatsby'
 import React, { useState } from 'react'
 import { GitHub, Mail, Twitter } from 'react-feather'
 import {
@@ -12,15 +11,17 @@ import {
   NavLink,
   Text,
 } from 'theme-ui'
-import { Wrapper } from '../components/layout/wrapper'
-import { Blob1, Blob2 } from '../components/svgs/blobs'
-import { Logo } from '../components/svgs/logo'
-import { Profile } from '../components/svgs/profile'
-import { Theme } from '../components/svgs/theme'
-import { ComingSoonBadge } from '../components/ui/coming-soon-badge'
-import { Project, ProjectCard } from '../components/ui/project-card'
-import { Sidebar } from '../components/ui/sidebar'
-import { SEO, SiteMetadata } from '../components/util/SEO'
+import { siteMetadata } from '../data/metadata'
+import { projects } from '../data/projects'
+import { Wrapper } from '../src/components/layout/wrapper'
+import { Blob1, Blob2 } from '../src/components/svgs/blobs'
+import { Logo } from '../src/components/svgs/logo'
+import { Profile } from '../src/components/svgs/profile'
+import { Theme } from '../src/components/svgs/theme'
+import { ComingSoonBadge } from '../src/components/ui/coming-soon-badge'
+import { ProjectCard } from '../src/components/ui/project-card'
+import { Sidebar } from '../src/components/ui/sidebar'
+import { SEO } from '../src/components/util/SEO'
 
 const IconButtonLink = (IconButton as unknown) as StyledComponent<
   React.ComponentProps<'a'>,
@@ -28,43 +29,7 @@ const IconButtonLink = (IconButton as unknown) as StyledComponent<
   {}
 >
 
-const query = graphql`
-  {
-    allContentYaml {
-      edges {
-        node {
-          projects {
-            title
-            icon
-            description
-            href
-          }
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        name
-        titleTemplate
-        description
-        imageUrl
-        url
-        email
-        twitter
-        github
-        job
-      }
-    }
-  }
-`
-
 export default () => {
-  const data = useStaticQuery(query)
-  const projects: Project[] = data.allContentYaml.edges.reduce(
-    (projects, edge) => [...projects, ...edge.node.projects],
-    []
-  )
-  const metadata: SiteMetadata = data.site.siteMetadata
   const [isOpen, setOpen] = useState(false)
 
   return (
@@ -122,15 +87,15 @@ export default () => {
             </Flex>
             <Box>
               <Heading as="h1" sx={{ fontSize: 7 }} mb={2}>
-                {metadata.name}
+                {siteMetadata.name}
               </Heading>
               <Text as="p" color="textMuted" mb={4}>
-                {metadata.description}
+                {siteMetadata.description}
               </Text>
               <div>
                 <IconButtonLink
                   as="a"
-                  href={`https://github.com/${metadata.github}`}
+                  href={`https://github.com/${siteMetadata.github}`}
                   aria-label="GitHub"
                   mr={2}
                 >
@@ -138,7 +103,7 @@ export default () => {
                 </IconButtonLink>
                 <IconButtonLink
                   as="a"
-                  href={`https://twitter.com/${metadata.twitter}`}
+                  href={`https://twitter.com/${siteMetadata.twitter}`}
                   aria-label="Twitter"
                   mr={2}
                 >
@@ -147,7 +112,7 @@ export default () => {
 
                 <IconButtonLink
                   as="a"
-                  href={`mailto:${metadata.email}`}
+                  href={`mailto:${siteMetadata.email}`}
                   aria-label="Twitter"
                 >
                   <Mail width="20px" height="20px" />

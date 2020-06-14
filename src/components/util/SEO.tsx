@@ -1,96 +1,54 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import Head from 'next/head'
 import React, { SFC } from 'react'
-import { Helmet } from 'react-helmet'
+import { siteMetadata, SiteMetadata } from '../../../data/metadata'
 
-const query = graphql`
-  {
-    site {
-      siteMetadata {
-        name
-        titleTemplate
-        description
-        imageUrl
-        url
-        email
-        twitter
-        github
-        job
-        imageWidth
-        imageHeight
-      }
-    }
-  }
-`
-
-export interface SiteMetadata {
-  name: string
-  titleTemplate: string
-  description: string
-  imageUrl: string
-  url: string
-  email: string
-  twitter: string
-  github: string
-  job: string
-  imageWidth: number
-  imageHeight: number
-}
-
-export const SEO: SFC<Partial<SiteMetadata>> = (props) => {
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(query)
-  const metadata: SiteMetadata = { ...siteMetadata, ...props }
-  const imageUrl = `${metadata.url}/${metadata.imageUrl}`
+export const SEO: SFC<Partial<SiteMetadata>> = () => {
+  const imageUrl = `${siteMetadata.url}/${siteMetadata.imageUrl}`
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    email: metadata.email,
+    email: siteMetadata.email,
     image: imageUrl,
-    jobTitle: metadata.job,
-    name: metadata.name,
+    jobTitle: siteMetadata.job,
+    name: siteMetadata.name,
     gender: 'male',
     nationality: 'Belgian',
-    url: metadata.url,
+    url: siteMetadata.url,
     sameAs: [
-      `https://www.github.com/${metadata.github}`,
-      `https://www.twitter.com/${metadata.twitter}`,
+      `https://www.github.com/${siteMetadata.github}`,
+      `https://www.twitter.com/${siteMetadata.twitter}`,
     ],
   }
 
   return (
-    <Helmet
-      titleTemplate={metadata.titleTemplate}
-      defaultTitle={metadata.name}
-      htmlAttributes={{ lang: 'en' }}
-    >
-      <link rel="canonical" href={metadata.url} />
-      <meta name="description" content={metadata.description} />
+    <Head>
+      <link rel="canonical" href={siteMetadata.url} />
+      <meta name="description" content={siteMetadata.description} />
       <meta name="image" content={imageUrl} />
 
-      <meta property="og:url" content={metadata.url} />
+      <meta property="og:url" content={siteMetadata.url} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={metadata.name} />
-      <meta property="og:description" content={metadata.description} />
+      <meta property="og:title" content={siteMetadata.name} />
+      <meta property="og:description" content={siteMetadata.description} />
       <meta property="og:image" content={imageUrl} />
       <meta
         property="og:image:width"
-        content={metadata.imageWidth.toString()}
+        content={siteMetadata.imageWidth.toString()}
       />
       <meta
         property="og:image:height"
-        content={metadata.imageHeight.toString()}
+        content={siteMetadata.imageHeight.toString()}
       />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={metadata.twitter} />
-      <meta name="twitter:title" content={metadata.name} />
-      <meta name="twitter:description" content={metadata.description} />
+      <meta name="twitter:creator" content={siteMetadata.twitter} />
+      <meta name="twitter:title" content={siteMetadata.name} />
+      <meta name="twitter:description" content={siteMetadata.description} />
       <meta name="twitter:image" content={imageUrl} />
 
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
-    </Helmet>
+    </Head>
   )
 }
