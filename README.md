@@ -5,11 +5,11 @@
 ## Develop
 
 ```
-npm run dev
+yarn dev
 ```
 
 ## Serve
 
 ```
-npm start
+yarn start
 ```

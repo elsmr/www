@@ -24,6 +24,7 @@ export const SEO: SFC<Partial<SiteMetadata>> = () => {
     <Head>
       <title>{siteMetadata.name}</title>
       <link rel="canonical" href={siteMetadata.url} />
+      <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="manifest" href="/manifest.webmanifest" />
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       <meta name="description" content={siteMetadata.description} />

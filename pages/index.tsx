@@ -9,7 +9,7 @@ import {
   Heading,
   IconButton,
   NavLink,
-  Text,
+  Text
 } from 'theme-ui'
 import { siteMetadata } from '../data/metadata'
 import { projects } from '../data/projects'
@@ -29,7 +29,7 @@ const IconButtonLink = (IconButton as unknown) as StyledComponent<
   {}
 >
 
-export default () => {
+const HomePage = () => {
   const [isOpen, setOpen] = useState(false)
 
   return (
@@ -176,3 +176,5 @@ export default () => {
     </>
   )
 }
+
+export default HomePage;
