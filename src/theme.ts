@@ -1,3 +1,5 @@
+import { Theme } from 'theme-ui'
+
 const focusRing = {
   '&:focus': {
     color: 'inherit',
@@ -29,7 +31,7 @@ const iconButtonStyle = {
 const systemFont =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
 
-export const theme = {
+export const theme: Theme = {
   useColorSchemeMediaQuery: true,
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {

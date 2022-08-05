@@ -8,8 +8,7 @@ import {
   Grid,
   Heading,
   IconButton,
-  NavLink,
-  Text
+  Text,
 } from 'theme-ui'
 import { siteMetadata } from '../data/metadata'
 import { projects } from '../data/projects'
@@ -18,12 +17,11 @@ import { Blob1, Blob2 } from '../src/components/svgs/blobs'
 import { Logo } from '../src/components/svgs/logo'
 import { Profile } from '../src/components/svgs/profile'
 import { Theme } from '../src/components/svgs/theme'
-import { ComingSoonBadge } from '../src/components/ui/coming-soon-badge'
 import { ProjectCard } from '../src/components/ui/project-card'
 import { Sidebar } from '../src/components/ui/sidebar'
 import { SEO } from '../src/components/util/SEO'
 
-const IconButtonLink = (IconButton as unknown) as StyledComponent<
+const IconButtonLink = IconButton as unknown as StyledComponent<
   React.ComponentProps<'a'>,
   BoxOwnProps,
   {}
@@ -46,12 +44,7 @@ const HomePage = () => {
           <Flex sx={{ alignItems: 'center' }}>
             <Logo width="36px" sx={{ flexShrink: 0 }} />
             <Box as="nav" px={[0, 2, 5]}>
-              <Box as="ul" sx={{ listStyle: 'none' }}>
-                <li style={{ position: 'relative' }}>
-                  <NavLink href="#">blog</NavLink>
-                  <ComingSoonBadge />
-                </li>
-              </Box>
+              <Box as="ul" sx={{ listStyle: 'none' }}></Box>
             </Box>
           </Flex>
           <Box>
@@ -89,8 +82,13 @@ const HomePage = () => {
               <Heading as="h1" sx={{ fontSize: 7 }} mb={2}>
                 {siteMetadata.name}
               </Heading>
+              <Text as="p" color="textMuted" mb={2}>
+                Web enthusiast based in Ghent, Belgium 🇧🇪.
+              </Text>
+
               <Text as="p" color="textMuted" mb={4}>
-                {siteMetadata.description}
+                Currently working as a Full Stack Engineer at Apideck. Solving
+                SaaS integrations with a focus on great DX and Open Source.
               </Text>
               <div>
                 <IconButtonLink
@@ -177,4 +175,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage;
+export default HomePage

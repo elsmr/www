@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import React, { SFC } from 'react'
+import React, { FunctionComponent } from 'react'
 import { siteMetadata, SiteMetadata } from '../../../data/metadata'
 
-export const SEO: SFC<Partial<SiteMetadata>> = () => {
+export const SEO: FunctionComponent<Partial<SiteMetadata>> = () => {
   const imageUrl = `${siteMetadata.url}/${siteMetadata.imageUrl}`
   const structuredData = {
     '@context': 'https://schema.org',

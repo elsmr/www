@@ -1,7 +1,7 @@
 export const siteMetadata = {
   name: 'Elias Meire',
   description:
-    "Frontend developer based in Ghent, Belgium. I love JavaScript, React and Open Source. Currently I'm obsessing over: animation, a11y, theme-ui and Canvas/WebGL.",
+    'Web enthusiast based in Ghent, Belgium. Currently working as a Full Stack Engineer at Apideck. Solving SaaS integrations with a focus on great DX and Open Source.',
   url: 'https://elsmr.dev',
   imageUrl: 'social.jpg',
   imageHeight: 1200,
@@ -9,7 +9,7 @@ export const siteMetadata = {
   email: 'elias@meire.dev',
   twitter: '@elsmr_',
   github: 'elsmr',
-  job: 'Frontend Engineer',
+  job: 'Full Stack Engineer',
 }
 
 export type SiteMetadata = typeof siteMetadata

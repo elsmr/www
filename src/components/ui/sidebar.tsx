@@ -1,10 +1,10 @@
-import { css, Global } from '@emotion/core'
+import { css, Global } from '@emotion/react'
 import { alpha } from '@theme-ui/color'
-import React, { ChangeEvent, SFC } from 'react'
+import React, { ChangeEvent, FunctionComponent } from 'react'
 import { X } from 'react-feather'
 import FocusLock from 'react-focus-lock'
 import { useHotkeys } from 'react-hotkeys-hook'
-import { animated, useSpring } from 'react-spring'
+import { animated, useSpring } from '@react-spring/web'
 import {
   Box,
   Flex,
@@ -19,10 +19,10 @@ import { ClientOnlyPortal } from '../util/ClientOnlyPortal'
 
 const ABox = animated(Box)
 
-export const Sidebar: SFC<{ isOpen: boolean; onClose: () => void }> = ({
-  isOpen,
-  onClose,
-}) => {
+export const Sidebar: FunctionComponent<{
+  isOpen: boolean
+  onClose: () => void
+}> = ({ isOpen, onClose }) => {
   const [colorMode, setColorMode] = useColorMode()
   useHotkeys('esc', onClose)
 
@@ -67,9 +67,7 @@ export const Sidebar: SFC<{ isOpen: boolean; onClose: () => void }> = ({
             zIndex: 4,
           }}
           style={{
-            transform: t.interpolate(
-              (t) => `translate3d(${(1 - t) * 120}%, 0, 0)`
-            ),
+            transform: t.to((t) => `translate3d(${(1 - t) * 120}%, 0, 0)`),
           }}
         >
           <Flex

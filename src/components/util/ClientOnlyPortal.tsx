@@ -1,10 +1,16 @@
-import { SFC, useEffect, useRef, useState } from 'react'
+import {
+  FunctionComponent,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import { createPortal } from 'react-dom'
 
-export const ClientOnlyPortal: SFC<{ selector: string }> = ({
-  children,
-  selector,
-}) => {
+export const ClientOnlyPortal: FunctionComponent<{
+  selector: string
+  children: ReactNode
+}> = ({ children, selector }) => {
   const ref = useRef()
   const [mounted, setMounted] = useState(false)
 

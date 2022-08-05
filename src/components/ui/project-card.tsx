@@ -1,6 +1,6 @@
-import React, { SFC } from 'react'
+import React, { FunctionComponent } from 'react'
 import { GitHub } from 'react-feather'
-import { animated, useSpring } from 'react-spring'
+import { animated, useSpring } from '@react-spring/web'
 import { Box, Card, Heading, Link, Text } from 'theme-ui'
 import { Blob1, Blob2 } from '../svgs/blobs'
 
@@ -15,7 +15,7 @@ const ALink = animated(Link)
 const ABlob1 = animated(Blob1)
 const ABlob2 = animated(Blob2)
 
-export const ProjectCard: SFC<Project> = ({
+export const ProjectCard: FunctionComponent<Project> = ({
   description,
   href,
   title,
@@ -30,12 +30,12 @@ export const ProjectCard: SFC<Project> = ({
       variant="invisible"
       href={href}
       aria-label={title}
-      onMouseEnter={() => setT({ t: 1 })}
-      onMouseLeave={() => setT({ t: 0 })}
+      onMouseEnter={() => setT.start({ t: 1 })}
+      onMouseLeave={() => setT.start({ t: 0 })}
       style={{
         borderRadius: '8px',
-        left: t.interpolate((t) => t),
-        transform: t.interpolate((t) => `scale(${1 + t * 0.04})`),
+        left: t.to((t) => t),
+        transform: t.to((t) => `scale(${1 + t * 0.04})`),
       }}
     >
       <Card
@@ -77,7 +77,7 @@ export const ProjectCard: SFC<Project> = ({
             width: '100%',
           }}
           style={{
-            transform: t.interpolate(
+            transform: t.to(
               (t) =>
                 `translate3d(${t * 60}%, ${t * -28}%, 0) rotate(${t * -20}deg)`
             ),
@@ -92,7 +92,7 @@ export const ProjectCard: SFC<Project> = ({
             width: '100%',
           }}
           style={{
-            transform: t.interpolate(
+            transform: t.to(
               (t) =>
                 `translate3d(${t * -60}%, ${t * 30}%, 0) rotate(${t * -20}deg)`
             ),
