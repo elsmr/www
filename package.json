@@ -14,7 +14,7 @@
     "@next/bundle-analyzer": "12.2.4",
     "@react-spring/web": "9.5.2",
     "@theme-ui/color": "0.14.7",
-    "next": "12.2.4",
+    "next": "13.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "2.0.10",
