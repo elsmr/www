@@ -83,12 +83,12 @@ const HomePage = () => {
                 {siteMetadata.name}
               </Heading>
               <Text as="p" color="textMuted" mb={2}>
-                Web enthusiast based in Ghent, Belgium 🇧🇪.
+                Freelance software engineer based in Ghent, Belgium 🇧🇪.
               </Text>
 
               <Text as="p" color="textMuted" mb={4}>
-                Currently working as a Full Stack Engineer at Apideck. Solving
-                SaaS integrations with a focus on great DX and Open Source.
+                Currently building the best workflow automation tool at n8n. I
+                focus on TypeScript development, APIs and integrations.
               </Text>
               <div>
                 <IconButtonLink
