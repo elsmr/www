@@ -52,9 +52,12 @@ export const SEO: FunctionComponent<Partial<SiteMetadata>> = () => {
       <meta name="twitter:description" content={siteMetadata.description} />
       <meta name="twitter:image" content={imageUrl} />
 
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      ></script>
     </Head>
   )
 }

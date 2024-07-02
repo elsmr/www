@@ -5,11 +5,11 @@
 ## Develop
 
 ```
-yarn dev
+pnpm dev
 ```
 
 ## Serve
 
 ```
-yarn start
+pnpm start
 ```

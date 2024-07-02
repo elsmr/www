@@ -1,7 +1,7 @@
 export const siteMetadata = {
   name: 'Elias Meire',
   description:
-    'Web enthusiast based in Ghent, Belgium. Currently working as a Full Stack Engineer at Apideck. Solving SaaS integrations with a focus on great DX and Open Source.',
+    'Freelance software engineer based in Ghent, Belgium. Currently building the best workflow automation tool at n8n. I focus on TypeScript, APIs and integrations.',
   url: 'https://elsmr.dev',
   imageUrl: 'social.jpg',
   imageHeight: 1200,
@@ -9,7 +9,7 @@ export const siteMetadata = {
   email: 'elias@meire.dev',
   twitter: '@elsmr_',
   github: 'elsmr',
-  job: 'Full Stack Engineer',
+  job: 'Software Engineer',
 }
 
 export type SiteMetadata = typeof siteMetadata

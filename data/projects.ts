@@ -1,5 +1,12 @@
 export const projects = [
   {
+    title: 'n8n-io/n8n',
+    icon: 'Github',
+    href: 'https://github.com/n8n/n8n-io',
+    description:
+      'Free and source-available fair-code licensed workflow automation tool. Easily automate tasks across different services.',
+  },
+  {
     title: 'elsmr/mp3-mediarecorder',
     icon: 'Github',
     href: 'https://github.com/elsmr/mp3-mediarecorder',
@@ -36,4 +43,4 @@ export const projects = [
   },
 ]
 
-export type Project = typeof projects[number]
+export type Project = (typeof projects)[number]
