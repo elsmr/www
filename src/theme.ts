@@ -63,6 +63,7 @@ export const theme: Theme = {
     illustrationBackground: '#fff',
     control: '#7F5AF0',
     controlBorder: '#0f141a',
+    warningBackground: '',
     modes: {
       dark: {
         border: '#171f28',
