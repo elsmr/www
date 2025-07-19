@@ -11,7 +11,7 @@ export const ClientOnlyPortal: FunctionComponent<{
   selector: string
   children: ReactNode
 }> = ({ children, selector }) => {
-  const ref = useRef()
+  const ref = useRef<HTMLElement | null>(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
