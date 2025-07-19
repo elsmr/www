@@ -14,10 +14,7 @@ export const SEO: FunctionComponent<Partial<SiteMetadata>> = () => {
     gender: 'male',
     nationality: 'Belgian',
     url: siteMetadata.url,
-    sameAs: [
-      `https://www.github.com/${siteMetadata.github}`,
-      `https://www.twitter.com/${siteMetadata.twitter}`,
-    ],
+    sameAs: [`https://www.github.com/${siteMetadata.github}`],
   }
 
   return (
@@ -47,7 +44,6 @@ export const SEO: FunctionComponent<Partial<SiteMetadata>> = () => {
       />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={siteMetadata.twitter} />
       <meta name="twitter:title" content={siteMetadata.name} />
       <meta name="twitter:description" content={siteMetadata.description} />
       <meta name="twitter:image" content={imageUrl} />

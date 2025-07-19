@@ -1,6 +1,6 @@
 import { StyledComponent } from '@emotion/styled'
 import React, { useState } from 'react'
-import { GitHub, Mail, Twitter } from 'react-feather'
+import { GitHub, Mail } from 'react-feather'
 import {
   Box,
   BoxOwnProps,
@@ -99,19 +99,11 @@ const HomePage = () => {
                 >
                   <GitHub width="20px" height="20px" />
                 </IconButtonLink>
-                <IconButtonLink
-                  as="a"
-                  href={`https://twitter.com/${siteMetadata.twitter}`}
-                  aria-label="Twitter"
-                  mr={2}
-                >
-                  <Twitter width="20px" height="20px" />
-                </IconButtonLink>
 
                 <IconButtonLink
                   as="a"
                   href={`mailto:${siteMetadata.email}`}
-                  aria-label="Twitter"
+                  aria-label="Email"
                 >
                   <Mail width="20px" height="20px" />
                 </IconButtonLink>

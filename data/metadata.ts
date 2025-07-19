@@ -7,7 +7,6 @@ export const siteMetadata = {
   imageHeight: 1200,
   imageWidth: 1200,
   email: 'elias@meire.dev',
-  twitter: '@elsmr_',
   github: 'elsmr',
   job: 'Software Engineer',
 }
