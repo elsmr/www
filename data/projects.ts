@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'n8n-io/n8n',
     icon: 'Github',
-    href: 'https://github.com/n8n/n8n-io',
+    href: 'https://github.com/n8n-io/n8n',
     description:
       'Free and source-available fair-code licensed workflow automation tool. Easily automate tasks across different services.',
   },

@@ -19,7 +19,6 @@ import { Profile } from '../src/components/svgs/profile'
 import { Theme } from '../src/components/svgs/theme'
 import { ProjectCard } from '../src/components/ui/project-card'
 import { Sidebar } from '../src/components/ui/sidebar'
-import { Banner } from '../src/components/ui/banner'
 import { SEO } from '../src/components/util/SEO'
 
 const IconButtonLink = IconButton as unknown as StyledComponent<
@@ -33,17 +32,6 @@ const HomePage = () => {
 
   return (
     <>
-      {
-        <Banner
-          icon={AlertCircle}
-          title={
-            <Text>
-              I don't have an X account. @elsmr_ is{' '}
-              <Text sx={{ fontWeight: 'bold' }}>not</Text> me.
-            </Text>
-          }
-        />
-      }
       <header>
         <SEO />
         <Wrapper
